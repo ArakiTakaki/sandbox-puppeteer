@@ -1,6 +1,11 @@
 const puppeteer = require('puppeteer');
 const userMeta = require('./meta');
 
+/**
+ * 引用元：https://github.com/konojunya/tweet-use-puppeteer
+ * @param {String} text ツイートする情報を送信する。
+ */
+
 const tweet = async text =>{
   const browser = await puppeteer.launch({
     arg: ['--lang=ja,en-US,en'], //日本語化する
